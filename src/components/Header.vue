@@ -54,6 +54,7 @@ div {
   flex-direction: column;
   margin-top: -24vh;
   position: fixed;
+  z-index:100;
 }
 
 ul {
