@@ -1,6 +1,7 @@
 <template>
   <Header />
   <Slide />
+  <Boton />
   <div class="catalogos"></div>
   <Catalogo />
   <Footer />
@@ -11,6 +12,8 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Catalogo from "./components/Catalogo.vue";
 import Slide from "./components/Slide.vue";
+import Boton from "./components/Boton.vue";
+
 export default {
   name: "App",
   components: {
@@ -18,6 +21,7 @@ export default {
     Footer,
     Catalogo,
     Slide,
+    Boton,
   },
 };
 </script>

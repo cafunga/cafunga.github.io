@@ -1,23 +1,19 @@
 <template>
-  <div class="presentacion">
+   <div>
+    <div class="presentacion">
     <div class="contenedor">
-      <div class="foto">
-        <p>Laboratorio de diseño!!! Ventas de ropa, accesorios y artículos para el
-        hogar,todos diseñados y confeccionados en Cuba, 100% artesanales</p> 
+      <div class="foto" v-for="n in 4" :key=n>      
+        <p>Laboratorio de diseño!!!</p> 
       </div>
-      <div class="foto">
-        <p>Laboratorio de diseño!!! Ventas de ropa, accesorios y artículos para el
-        hogar,todos diseñados y confeccionados en Cuba, 100% artesanales</p> 
-      </div>
-      <div class="foto">
-        <p>Laboratorio de diseño!!! Ventas de ropa, accesorios y artículos para el
-        hogar,todos diseñados y confeccionados en Cuba, 100% artesanales</p> 
-      </div>
-      <div class="foto">
-        <p>Laboratorio de diseño!!! Ventas de ropa, accesorios y artículos para el
-        hogar,todos diseñados y confeccionados en Cuba, 100% artesanales</p> 
-      </div>
+      
     </div>
+    
+  </div>  
+  <div class="description">
+    <p>Ventas de ropa, accesorios y artículos para el
+       hogar,todos diseñados y confeccionados en Cuba, 100% artesanales
+    </p>
+  </div>
   </div>
 </template>
 
@@ -26,66 +22,115 @@ export default {};
 </script>
 
 <style scoped>
+*{
+  margin:0;
+  padding:0;
+}
 .presentacion {
   width: 100vw;
-  height: 40vh;
+  height: 55vh;
   margin: 0px;
   padding-top: 6vh;
   background-size: cover;
   overflow-x: hidden;
 }
 
-.presentacion p {
-  color: #FFC069;
-  display: flex;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1.3em;
-  font-weight: bolder;
-  height: auto;
-  justify-content: center;
-  margin: 5vh;
-  padding: 0px;
-  text-align: center;
-  text-shadow: 0.5px 0.5px black, -0.5px -0.5px black;
-}
 
 .contenedor {
   width: 400vw;
-  height: 40vh;
+  height: 55vh;
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  position: relative;
+  
   animation: slide;
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
+  
 }
 
 .foto {
   width: 100vw;
-  height: 40vh;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+}
+ 
+ 
+.foto:nth-child(1)::before {
+  content: '';
+  width: 100vw;
+  height: 55vh;
+  position: absolute;
+  filter: grayscale(0.4);
+  background: url(https://imgur.com/wihG20k.jpg) center / cover no-repeat;
+
+  
+}
+.foto:nth-child(2)::before {
+  content: '';
+  width: 100vw;
+  height: 55vh;
+  position: absolute;
+  filter: grayscale(0.4);
+  background: url(https://imgur.com/b32HK7h.jpg) center / cover no-repeat;
+
+  
+}
+.foto:nth-child(3)::before {
+  content: '';
+  width: 100vw;
+  height: 55vh;
+  position: absolute;
+  filter: grayscale(0.4);
+  background: url(https://imgur.com/hRsxQaq.jpg) center / cover no-repeat;
+
+  
+}
+.foto:nth-child(4)::before {
+  content: '';
+  width: 100vw;
+  height: 55vh;
+  position: absolute;
+  filter: grayscale(0.4);
+  background: url(https://imgur.com/DfLudlA.jpg) center / cover no-repeat;
+
+  
 }
 
-.foto:nth-child(1) {
-  background-image: url(https://imgur.com/wihG20k.jpg);
-  background-position: center;
-  background-size: cover;
+.presentacion p {
+  color: #FFB319;    
+  font-size: 1.6em;
+  font-weight: bolder;
+  margin-top: 6vh;
+  width: max-content;
+  height: max-content;
+  text-align: center;
+  text-shadow: 0.5px 0.5px black, -0.5px -0.5px black;
+  position:relative;
 }
-.foto:nth-child(2) {
-  background-image: url(https://imgur.com/b32HK7h.jpg);
-  background-position: center;
-  background-size: cover;
+.description{
+  background-color: #FFB319;
+  width: 100vw;
+  height: 20vh;
+  padding: 0 1em;
+  box-sizing: border-box;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color:#112031;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
 }
-.foto:nth-child(3) {
-  background-image: url(https://imgur.com/hRsxQaq.jpg);
-  background-position: center;
-  background-size: cover;
-}
-.foto:nth-child(4) {
-  background-image: url(https://imgur.com/DfLudlA.jpg);
-  background-size: cover;
-}
+
+
 
 @keyframes slide {
   0% {
