@@ -49,7 +49,7 @@ div {
   padding: 0px;
   width: 100%;
   height: 30vh;
-  background-color: rgba(240, 238, 177, 0.6);
+  background-color: rgba(240, 238, 177, 0.8);
   display: flex;
   flex-direction: column;
   margin-top: -24vh;
