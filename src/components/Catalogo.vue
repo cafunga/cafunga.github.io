@@ -1,4 +1,5 @@
 <template>
+  <div class="catalogos"></div>
   <div class="products-container">
     <div v-for="catalogo in catalogos" :key="catalogo.id" class="container">
       <div
@@ -47,5 +48,16 @@ export default {
   color: #dad773;
   padding:2%;
   
+}
+
+.catalogos {
+  width: 100%;
+  height: 7vh;
+  margin: 0px;
+  background-color: #fdfce0;
+  background-image: url(https://imgur.com/w9XqNC2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40vw auto;
 }
 </style>

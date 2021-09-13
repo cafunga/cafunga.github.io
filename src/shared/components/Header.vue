@@ -1,10 +1,11 @@
 <template>
   <div id="head" :class="{ up: up, down: down }">
     <ul class="barra">
-      <li>Principal</li>
-      <li>Comprar</li>
-      <li>Ingresar</li>
-      <li>Registrarse</li>
+      <router-link to="/" class="a">Principal</router-link>
+      <router-link to="/login" class="a">Log In</router-link>
+      <router-link to="/login" class="a">Catálogo</router-link>
+      <router-link to="/FAQ" class="a">FAQ</router-link>
+
       <li class="menu">
         <img
           class="caf_ico"
@@ -76,6 +77,17 @@ ul li {
   justify-content: center;
   align-items: center;
   color: #b1ad25;
+}
+
+.a{
+  height: 6vh;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b1ad25;
+  text-decoration: none;
 }
 
 .menu {
