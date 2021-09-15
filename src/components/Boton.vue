@@ -8,7 +8,7 @@ button{
     line-height: 3;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color:white;
+    color:rgb(123,164,137);
 
     border-radius: 5em;
     border: 1px solid rgba(0, 0, 0, 0.8);
@@ -17,7 +17,7 @@ button{
     top: 53vh;
     left: calc(50vw - 4.5em);
 
-    background-color: #53b619 ;
+    background-color: rgb(20,58,58) ;
 
 }
 button:active{

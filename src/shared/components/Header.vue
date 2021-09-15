@@ -3,7 +3,7 @@
     <ul class="barra">
       <router-link to="/" class="a">Principal</router-link>
       <router-link to="/login" class="a">Log In</router-link>
-      <router-link to="/login" class="a">Catálogo</router-link>
+      <router-link to="/register" class="a">Registrarse</router-link>
       <router-link to="/FAQ" class="a">FAQ</router-link>
 
       <li class="menu">

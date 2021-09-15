@@ -114,7 +114,7 @@ export default {};
   position:relative;
 }
 .description{
-  background-color: #FFB319;
+  background-color: rgb(223,188,93);
   width: 100vw;
   height: 20vh;
   padding: 0 1em;

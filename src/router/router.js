@@ -10,7 +10,12 @@ const routes = [
     {
         path: '/login',
         component: () =>
-            import ('../shared/pages/LogInPage')
+            import ('../shared/pages/Login')
+    },
+    {
+        path: '/register',
+        component: () =>
+            import ('../shared/pages/Register')
     },
     {
         path: '/FAQ',
