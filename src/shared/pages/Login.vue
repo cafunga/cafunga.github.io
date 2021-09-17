@@ -1,10 +1,8 @@
 import Header from '@/shared/components/Header.vue';
 <template>
 <Header/>
-  <div>
-
-
-    <main class="box">
+  <main>
+    <div class="box">
       <h2>Login</h2>
       <form>
         <div class="inputBox">
@@ -17,14 +15,12 @@ import Header from '@/shared/components/Header.vue';
                  required/>
         </div>
         <div>
-          <button type="submit" name="" style="float: left">Submit</button>
-          <router-link class="button" style="float: left;" to="/register">Register</router-link>
+          <button type="submit" name="">Submit</button>
+          <router-link class="button" to="/register">Register</router-link>
         </div>
       </form>
-    </main>
-    <footer>
-    </footer>
-  </div>
+    </div>  
+  </main>
 </template>
 
 <script>
@@ -49,17 +45,23 @@ export default {
 * {
   font-family: "Roboto Mono";
 }
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .box {
   background-color: rgb(206, 202, 100);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(206, 202, 100,.5);
   margin: auto;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: left;
+  animation: entrada 0.5s ease-in;
+  transform-origin: center;
   width: 70vw;
 }
 
@@ -107,17 +109,18 @@ export default {
   
 }
 
-.box input[type="submit"]:hover, .box button[type="submit"]:hover, a.button:hover {
+.box input[type="submit"]:hover, 
+.box button[type="submit"]:hover, 
+a.button:hover {
   opacity: 0.8;
 }
 
-#tsparticles {
-  position: fixed;
-  margin: 0;
-  padding: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+
+@keyframes entrada {
+  from 
+  {
+    transform: scale(0);
+    border-radius: 50%;
+  }
 }
 </style>

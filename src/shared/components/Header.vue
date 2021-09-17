@@ -1,25 +1,29 @@
 <template>
-  <div id="head" :class="{ up: up, down: down }">
-    <ul class="barra">
-      <router-link to="/" class="a">Principal</router-link>
-      <router-link to="/login" class="a">Log In</router-link>
-      <router-link to="/register" class="a">Registrarse</router-link>
-      <router-link to="/FAQ" class="a">FAQ</router-link>
-
-      <li class="menu">
-        <img
-          class="caf_ico"
-          src="https://imgur.com/MaXQWYf.png"
-          alt="Logo Cafunga"
-        />
-        <img
-          @click="toggle"
-          class="caf_menu"
-          src="https://imgur.com/Vl8Q1Gm.png"
-          alt="Menu"
-        />
-      </li>
-    </ul>
+  <div class="head">
+      <div class="menu">
+        <figure>  
+          <img
+            class="caf_ico"
+            src="https://imgur.com/MaXQWYf.png"
+            alt="Logo Cafunga"
+          />
+        </figure>
+        <figure> 
+          <img
+            @click="toggle"
+            class="caf_menu"
+            src="https://imgur.com/Vl8Q1Gm.png"
+            alt="Menu"/>
+        </figure>
+      </div>
+      <div class="barra" :class="{showhide}" >
+        <ul>
+          <li><router-link to="/" >Principal</router-link></li>
+          <li><router-link to="/login">Log In</router-link></li>
+          <li><router-link to="/register">Registrarse</router-link></li>
+          <li><router-link to="/FAQ">FAQ</router-link></li>
+        </ul>
+    </div>    
   </div>
 </template>
 
@@ -28,14 +32,12 @@
 export default {
   data() {
     return {
-      down: false,
-      up: true,
+      showhide: false
     };
   },
   methods: {
     toggle() {
-      this.down = !this.down;
-      this.up = !this.up;
+      this.showhide = !this.showhide;
     },
   },
 };
@@ -45,106 +47,69 @@ export default {
 
 
 <style scoped>
-div {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 30vh;
-  background-color: rgba(240, 238, 177, 0.8);
-  display: flex;
-  flex-direction: column;
-  margin-top: -24vh;
+.head {
+  width: 100vw;
   position: fixed;
-  z-index:100;
+  top:0;
+  z-index: 1000;
+  animation: entrada 0.4s ease-in
 }
-
-ul {
-  width: 100%;
-  height: 30vh;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-ul li {
-  height: 6vh;
-  list-style-type: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #b1ad25;
-}
-
-.a{
-  height: 6vh;
-  list-style-type: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #b1ad25;
-  text-decoration: none;
-}
-
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(240, 238, 177, 1);
-
+  height: 3.5rem;
 }
 
 .caf_ico {
-  height: 6vh;
+  height: 3rem;
   width: auto;
   padding: 0px;
-}
+} 
 .caf_menu {
-  height: 5vh;
+  height: 3rem;
   width: auto;
   padding: 0px 3vw 0px 0px;
 }
 
-.up {
-  margin-top: -24vh;
-  animation: getItUp;
-  animation-duration: 200ms;
+.barra {
+  height: 30vh;
+  width: 100%;  
+  background-color: rgba(240, 238, 177, 0);
+  position: absolute;  
+  transform: scale(1 ,0);
+  transform-origin: top center;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
-.down {
-  margin-top: 0vh;
-  animation: getItDown;
-  animation-duration: 200ms;
+.barra ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.barra ul li a {
+  width: auto;
+  color: #b1ad25;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.showhide {
+  transform: scale( 1, 1);
   background-color: rgba(240, 238, 177, 1);
 }
 
-@keyframes getItDown {
-  0% {
-    margin-top: -24vh;
+@keyframes entrada {
+  from 
+  {
+    transform: translateY( -100%)
   }
+}
 
-  50% {
-    background-color: rgba(240, 238, 177, 0.8);
-  }
-  100% {
-    margin-top: 0vh;
-    background-color: rgba(240, 238, 177, 1);
-  }
-}
-@keyframes getItUp {
-  0% {
-    margin-top: 0vh;
-  }
-  50% {
-    background-color: rgba(240, 238, 177, 0.8);
-  }
-  100% {
-    margin-top: -24vh;
-    background-color: rgba(240, 238, 177, 1);
-  }
-}
+
 </style>

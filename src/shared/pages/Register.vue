@@ -1,8 +1,8 @@
 <template>
   <div>
  <Header/>
-
-    <main class="box">
+    <main>
+      <div class="box">
       <h2>Register</h2>
       <form>
         <div class="inputBox">
@@ -37,11 +37,12 @@
         </div>
         <button type="submit" name="" style="float: left">Submit</button>
         <router-link class="button" style="float: left" to="/login"
-          >Login</router-link
-        >
+        >Login</router-link        >
       </form>
+    </div>
     </main>
-    <footer></footer>
+    
+    
   </div>
 </template>
 
@@ -63,18 +64,22 @@ export default {
 * {
   font-family: "Roboto Mono";
 }
+
+main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .box {
   background-color: rgb(206, 202, 100);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(206, 202, 100, 0.5);
   margin: auto;
   padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: left;
   width: 70vw;
+  animation: entrada 0.5s ease-in
 }
 
 .box h2 {
@@ -126,5 +131,10 @@ a.button {
 .box button[type="submit"]:hover,
 a.button:hover {
   opacity: 0.8;
+}
+@keyframes entrada {
+  from {
+    transform: scale( 0)
+  }
 }
 </style>
