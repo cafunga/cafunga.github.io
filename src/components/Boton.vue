@@ -18,7 +18,7 @@ button{
     top: 53vh;
     left: calc(50vw - 4.5em);
 
-    animation: entrada 1s 1s ease-in forwards;
+    animation: entrada 0.4s 1s ease-in forwards;
     /* transform: translateY(100vh); */
     transform: scale(0)
 

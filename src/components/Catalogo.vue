@@ -32,8 +32,7 @@ export default {
 width: 100%;
 height: 7vh;
 margin: 0px;
-background: rgba(223,188,93, 0.5) 
-url(https://imgur.com/w9XqNC2.png) center / 25vh auto no-repeat;
+background: rgba(223,188,93,1) url(https://imgur.com/w9XqNC2.png) center / 25vh auto no-repeat;
 }
 .container {
   background-color: rgb(223,188,93);
