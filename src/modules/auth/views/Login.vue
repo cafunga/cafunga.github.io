@@ -1,6 +1,5 @@
-import Header from '@/shared/components/Header.vue';
+
 <template>
-<Header/>
   <main>
     <div class="box">
       <h2>Login</h2>
@@ -24,7 +23,6 @@ import Header from '@/shared/components/Header.vue';
 </template>
 
 <script>
-import Header from '@/shared/components/Header.vue'
 
 export default {
   name: "Login",
@@ -33,10 +31,7 @@ export default {
 
     }
   },
-  components:{
-    Header
-   
-  }
+
 }
 </script>
 
@@ -120,7 +115,6 @@ a.button:hover {
   from 
   {
     transform: scale(0);
-    border-radius: 50%;
   }
 }
 </style>

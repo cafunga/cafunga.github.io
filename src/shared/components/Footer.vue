@@ -3,34 +3,36 @@
         <ul>
             <li> Mapa del sitio</li>
             <li>
-                <a href="cafunga.html">
+                <router-link :to="{name:'homePage'}">
                     <p>Home</p>
                     <span class="material-icons">
                         home
                     </span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a href="cafunga.html">
+                <router-link :to="{name:'FAQ'}">                    
                     <p>&#191;Qui&eacute;nes somos&#63;</p>
                     <span class="material-icons">
                         face
                     </span>
-                </a>
+                </router-link>
             </li>
-            <li><a href="preguntas.html">
+            <li>
+                <router-link :to="{name:'FAQ'}">
                     <p>FAQ</p>
                     <span class="material-icons">
                         live_help
                     </span>
-                </a>
+                </router-link>
             </li>
-            <li><a href="preguntas.html">
+            <li>
+                <router-link :to="{name:'FAQ'}">
                     <p>Cat&aacute;logo</p>
                     <span class="material-icons">
                         download
                     </span>
-                </a>
+                 </router-link>
             </li>
             <li>
                 <a href="mailto:maryliansanchez2000@gmail.com">
@@ -41,13 +43,13 @@
                 </a>
             </li>
             <li>
-                <a class="address" href="preguntas.html">
+                <span class="address">
                     <p>Sancti Sp&iacute;ritus - Cuba
                     </p>
                     <span class="material-icons">
                         my_location
                     </span>
-                </a>
+                </span>
             </li>
         </ul>
     </footer>

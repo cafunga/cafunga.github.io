@@ -36,7 +36,7 @@ export default {};
   width: 400vw;
   height: 100%;  
   display: flex; 
-  animation: slide 30s infinite alternate linear;
+  animation: slide 10s infinite alternate linear;
   
 }
 

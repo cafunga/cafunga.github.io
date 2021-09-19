@@ -18,10 +18,10 @@
       </div>
       <div class="barra" :class="{showhide}" >
         <ul>
-          <li><router-link to="/" >Principal</router-link></li>
-          <li><router-link to="/login">Log In</router-link></li>
-          <li><router-link to="/register">Registrarse</router-link></li>
-          <li><router-link to="/FAQ">FAQ</router-link></li>
+          <li><router-link :to="{name:'homePage'}" >Principal</router-link></li>
+          <li><router-link :to="{name:'login'}">Log In</router-link></li>
+          <li><router-link :to="{name:'register'}">Registrarse</router-link></li>
+          <li><router-link :to="{name:'FAQ'}">FAQ</router-link></li>
         </ul>
     </div>    
   </div>

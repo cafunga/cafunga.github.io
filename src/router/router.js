@@ -1,31 +1,29 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomePage from '../shared/pages/HomePage'
+
+import HomeRouter from '../modules/home/router'
+import LoginRouter from  '../modules/auth/router'
+import FAQPage from  '../modules/faq/router'
+
 
 const routes = [
 
     {
         path: '/',
-        component: HomePage
+        ...HomeRouter
+        
     },
     {
         path: '/login',
-        component: () =>
-            import ('../shared/pages/Login')
-    },
-    {
-        path: '/register',
-        component: () =>
-            import ('../shared/pages/Register')
+        ...LoginRouter
     },
     {
         path: '/FAQ',
-        component: () =>
-            import ('../shared/pages/FAQPage')
+        ...FAQPage
     },
     {
         path: '/:pathMatch(.*)*',
-        component: () =>
-            import ('../shared/pages/notPageFound')
+        component: () => import(/* webpackChunkName:"register"*/ '../shared/pages/notPageFound'),
+
     }
 
 

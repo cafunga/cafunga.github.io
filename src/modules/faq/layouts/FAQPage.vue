@@ -1,10 +1,10 @@
 <template>
   <Header />
-   <div class="a">Futura página de login</div>
+   <div class="a">Futura página de FAQ</div>
 </template>
 
 <script>
-import Header from '../components/Header.vue'
+import Header from '@/shared/components/Header.vue'
 
 export default {
 components:{Header}
